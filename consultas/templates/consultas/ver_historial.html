@@ -1,0 +1,28 @@
+
+{% extends 'consultas/base.html' %}
+{% load static %}
+
+
+{% block title %}Historial Médico{% endblock %}
+
+{% block content %}
+<h2>Historial Médico</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Diagnóstico</th>
+            <th>Tratamiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in historial %}
+        <tr>
+            <td>{{ item.fecha }}</td>
+            <td>{{ item.diagnostico }}</td>
+            <td>{{ item.tratamiento }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

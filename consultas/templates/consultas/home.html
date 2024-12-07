@@ -1,0 +1,16 @@
+
+{% extends 'consultas/base.html' %}
+{% load static %}
+
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h2>Bienvenido a Gestión de Consultas Médicas</h2>
+<p>Elige una opción:</p>
+<ul>
+    <li><a href="{% url 'agendar_cita' %}">Agendar Cita</a></li>
+    <li><a href="{% url 'ver_historial' id_paciente=id_usuario %}">Ver Historial Médico</a></li>
+    <li><a href="{% url 'generar_reporte' %}">Generar Reporte</a></li>
+</ul>
+{% endblock %}

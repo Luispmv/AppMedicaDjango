@@ -1,0 +1,22 @@
+
+{% extends 'consultas/base.html' %}
+{% load static %}
+
+{% block title %}Agendar Cita{% endblock %}
+
+{% block content %}
+<h2>Agendar Cita</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="id_doctor">ID del Doctor:</label>
+    <input type="number" id="id_doctor" name="id_doctor" required>
+
+    <label for="id_paciente">ID del Paciente:</label>
+    <input type="number" id="id_paciente" name="id_paciente" required>
+
+    <label for="fecha_hora">Fecha y Hora:</label>
+    <input type="datetime-local" id="fecha_hora" name="fecha_hora" required>
+
+    <button type="submit">Agendar</button>
+</form>
+{% endblock %}

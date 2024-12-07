@@ -1,0 +1,17 @@
+
+{% extends 'consultas/base.html' %}
+{% load static %}
+
+
+{% block title %}Generar Reporte{% endblock %}
+
+{% block content %}
+<h2>Generar Reporte</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="contenido">Contenido del Reporte:</label>
+    <textarea id="contenido" name="contenido" rows="5" required></textarea>
+
+    <button type="submit">Generar</button>
+</form>
+{% endblock %}
