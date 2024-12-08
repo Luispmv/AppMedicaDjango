@@ -1,0 +1,18 @@
+{% extends 'consultas/base.html' %}
+
+{% block title %}Mis Citas{% endblock %}
+
+{% block content %}
+<h2>Mis Citas</h2>
+<ul>
+    {% for cita in citas %}
+    <li>
+        <p>Doctor: {{ cita.doctor.nombre }} {{ cita.doctor.apellido }}</p>
+        <p>Fecha y Hora: {{ cita.fecha_hora }}</p>
+        <p>Estado: {{ cita.estado }}</p>
+    </li>
+    {% empty %}
+    <p>No tienes citas programadas.</p>
+    {% endfor %}
+</ul>
+{% endblock %}

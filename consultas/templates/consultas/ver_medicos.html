@@ -1,0 +1,11 @@
+{% extends 'consultas/base.html' %}
+{% block title %}Lista de Médicos{% endblock %}
+
+{% block content %}
+<h2>Lista de Médicos</h2>
+<ul>
+    {% for medico in medicos %}
+        <li>{{ medico.nombre }} - {{ medico.especialidad }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

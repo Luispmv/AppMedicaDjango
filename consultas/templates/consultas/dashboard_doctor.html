@@ -1,0 +1,13 @@
+{% extends 'consultas/base.html' %}
+{% load static %}
+
+{% block title %}Dashboard Doctor{% endblock %}
+
+{% block content %}
+<h2>Bienvenido, Doctor</h2>
+<ul>
+    <li><a href="{% url 'agendar_cita_doctor' %}">Agendar Cita</a></li>
+    <li><a href="{% url 'ver_historial' id_paciente=id_usuario %}">Ver Historial Médico</a></li>
+    <li><a href="{% url 'generar_reporte' %}">Generar Reporte</a></li>
+</ul>
+{% endblock %}

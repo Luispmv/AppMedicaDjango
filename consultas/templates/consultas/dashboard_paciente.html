@@ -1,0 +1,11 @@
+{% extends 'consultas/base.html' %}
+{% block title %}Dashboard Paciente{% endblock %}
+
+{% block content %}
+<h2>Bienvenido, Paciente</h2>
+<ul>
+    <li><a href="{% url 'ver_medicos' %}">Ver Médicos</a></li>
+    <li><a href="{% url 'ver_citas' %}">Ver Citas</a></li>
+    <li><a href="{% url 'ver_tratamiento' %}">Ver Tratamiento</a></li>
+</ul>
+{% endblock %}

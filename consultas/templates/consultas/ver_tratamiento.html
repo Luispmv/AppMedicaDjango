@@ -1,0 +1,12 @@
+{% extends 'consultas/base.html' %}
+
+{% block title %}Mi Tratamiento{% endblock %}
+
+{% block content %}
+<h2>Mi Tratamiento</h2>
+<ul>
+    {% for item in tratamiento %}
+        <li>{{ item.descripcion }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
